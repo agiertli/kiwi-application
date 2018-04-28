@@ -26,7 +26,7 @@ openssl req -x509 -out localhost.crt -keyout localhost.key \
    printf "[dn]\nCN=localhost\n[req]\ndistinguished_name = dn\n[EXT]\nsubjectAltName=DNS:localhost\nkeyUsage=digitalSignature\nextendedKeyUsage=serverAuth")
    ```
    
-   When using Chrome you may need to access self-signed certificates on localhost like this:
+  When using Chrome you may need to enable following property in order to access https websites backed with self-signed certificates on localhost:
    ```
    chrome://flags/#allow-insecure-localhost
    ```
